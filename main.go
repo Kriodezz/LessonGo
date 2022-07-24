@@ -83,6 +83,51 @@ const (
 )
 */
 
+/*
+Условия
+ if a < b {
+      fmt.Println("a меньше, чем b")
+ }
+If с краткой инструкцией
+If может начинаться с инструкции, которая будет выполнена перед проверкой условия.
+Переменные, объявленные в этом блоке, доступны только в области видимости,
+которая существует до конца if. Пример:
+if v := math.Pow(x, n); v < lim {
+   // ...
+}
+else if - через пробел
+*/
+
+/*
+switch i {
+case 0: fmt.Println("Zero")
+case 1: fmt.Println("One")
+case 2: fmt.Println("Two")
+case 3: fmt.Println("Three")
+case 4: fmt.Println("Four")
+case 5: fmt.Println("Five")
+default: fmt.Println("Unknown Number")
+}
+В пхп по умолчанию продолжается выполнение кода, break - прерывает
+в go по умолчанию прерывает, чтобы выполнился след блок
+case 42:
+	fmt.Println(42)
+	fallthrough
+Аналог switch (true):
+switch {
+case 1 <= c && c <= 9:
+	fmt.Println("от 1 до 9")
+case 100 <= c && c <= 250:
+	fmt.Println("от 100 до 250")
+}
+*/
+
 func main() {
-	fmt.Println("Hello")
+	var x int
+	fmt.Scan(&x)
+	if (x%400 == 0) || ((x%4 == 0) && (x%100 != 0)) {
+		fmt.Println("YES")
+	} else {
+		fmt.Println("NO")
+	}
 }
